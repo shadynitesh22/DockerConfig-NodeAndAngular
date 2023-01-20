@@ -98,7 +98,7 @@ push_repo(){
     echo Type Your Branch:
     read Branch
 
-    git push origin remote 
+    ggpush 
     echo "Git push completed "
 
 
