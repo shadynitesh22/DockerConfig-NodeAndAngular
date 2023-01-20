@@ -82,7 +82,7 @@ pull_repo(){
         current_date=$(date +"%d/%m/%Y %T")
         echo Type Your Commit message:
         read varname
-        git commit -m "${red}$varname, by $system_username on $current_date"
+        git commit -m "${red}by $system_username on $current_date by $varname, "
         check_project
 
     fi
@@ -94,11 +94,11 @@ push_repo(){
     current_date=$(date +"%d/%m/%Y %T")
     echo Type Your Commit message:
     read varname
-    git commit -m "$varname"
+     git commit -m "${red} by $system_username on $current_date $varname "
     echo Type Your Branch:
     read Branch
 
-    git commit -m "${red}$varname, by $system_username on $current_date"
+    git push origin remote 
     echo "Git push completed "
 
 
