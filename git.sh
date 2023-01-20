@@ -111,8 +111,9 @@ init_repo
 add_remote
 
 
+touch .welcome.vt
 
-echo = "
+"
 [2J
 (B
 [9;10H#6(0       aa
@@ -125,7 +126,8 @@ echo = "
 [16;10H         | O  O  | | | | | | |  O  O |--push push .
 [17;10H         |_______I_I_I_I_I_I_I_______|
 
-[19;10H            [Welcome to git shell ]"
+[19;10H            [Welcome to git shell ]" > welcome.vt
+
 
 sudo apt-get install toilet
 toilet -F metal "Welcome to git shell"
