@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  backend:
+    build:
+      context: ./gratitudeBackend
+      dockerfile: Dockerfile
+    command: npm run dev
+    volumes:
+      - ./gratitudeBackend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+  frontend:
+    build:
+      context: ./gratitudeFrontend
+      dockerfile: Dockerfile
+    command: ng serve --host 0.0.0.0
+    ports:
+      - 4200:4200
