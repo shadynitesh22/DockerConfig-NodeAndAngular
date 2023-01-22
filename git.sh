@@ -188,7 +188,9 @@ build_image() {
         echo "Type Your version (MAJOR.MINOR.PATCH):"
        
         read version
+
         echo "Please type the image name"
+        
         read imagename 
 
         docker build -t . $imagename:$version
