@@ -186,8 +186,12 @@ build_image() {
     if [ -f "Dockerfile" ]; then
         echo "This is a Dockerized project, building image..."
         echo "Type Your version (MAJOR.MINOR.PATCH):"
+       
         read version
-        docker build -t . <image-name >:$version
+        echo "Please type the image name"
+        read imagename 
+
+        docker build -t . $imagename:$version
 
     elif [ ! -f "DockerFile" ]; then
         dockerize_project
